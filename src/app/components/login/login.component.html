@@ -1,0 +1,37 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <mat-toolbar>
+            <span>LOGIN</span>
+        </mat-toolbar>
+        <mat-card class="my-card">
+            <form class="my-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+                <mat-card-content>
+                    <mat-form-field class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="f.email.errors?.required"> Email is required </mat-error>
+                        <mat-error *ngIf="f.email.errors?.email"> Invalid email address </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                        <mat-error *ngIf="f.password.errors?.required"> Password is required </mat-error>
+                        <mat-error *ngIf="f.password.errors?.minlength"> Minimum 6 characters required</mat-error>
+                        <mat-error *ngIf="f.password.errors?.whitespace"> Whitespace not allowed </mat-error>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" type="submit"
+                        [disabled]="loginForm.pristine || loginForm.invalid">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        LOGIN</button>
+                    <!-- (click)="login()" -->
+                    <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+
+                </mat-card-actions>
+            </form>
+        </mat-card>
+        {{loginForm.value|json}}
+    </div>
+</div>
