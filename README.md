@@ -1,4 +1,4 @@
-# AroscopNg8
+# angular8-rxjs-reactiveform
  * Angular 8, material desing, RxJs and mongodb backend
  * Using JWT token to authenticate user login and using HTTP_INTERCEPTOR to passing token to validate at backend.
  * Reerence from: https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial
