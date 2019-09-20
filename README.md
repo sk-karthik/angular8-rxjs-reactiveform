@@ -1,4 +1,10 @@
 # AroscopNg8
+ * Angular 8, material desing, RxJs and mongodb backend
+ * Using JWT token to authenticate user login and using HTTP_INTERCEPTOR to passing token to validate at backend.
+ * Reerence from: https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial
+ Backend:
+ * Backend API Call: http://localhost:3000/api/v1/user/login
+ * Backend server files available inside the 'backend' folder, server start from main folder "npm start"
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
